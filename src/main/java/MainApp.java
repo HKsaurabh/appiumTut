@@ -16,7 +16,6 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 
-import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -39,9 +38,9 @@ public class MainApp extends SharedProperties {
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
         Thread.sleep(10000);
-       //getting started --> FirstPage
+
+        //getting started --> FirstPage
         SharedProperties.clickWithId(FirstPage.gettingStartedBtn(),driver);
-       // AndroidElement Enablebtn = driver.findElement(By.id("com.urbanclap.urbanclap:id/location_selection_dialog_button_1"));
 
         if(driver.findElements(By.id("com.urbanclap.urbanclap:id/location_selection_dialog_button_1")).size()!=0){
             driver.findElement(By.id("com.urbanclap.urbanclap:id/location_selection_dialog_button_1")).click();
@@ -65,7 +64,6 @@ public class MainApp extends SharedProperties {
 
 
         //RepairPage
-
         SharedProperties.Class(RepairPage.getRepairPage(),driver);
 
         //Select Address
@@ -76,40 +74,17 @@ public class MainApp extends SharedProperties {
         SharedProperties.sendKeys(AddNewAddress.getLandMarkTxt(),"abc",driver);
         SharedProperties.clickWithId(AddNewAddress.getSaveBtn(),driver);
 
-
-
         //SelectDateTime
 
         SharedProperties.clickWithId(DateTimePage.getDateSelect(),driver);
         SharedProperties.clickWithId(DateTimePage.getTimeSelect(),driver);
         SharedProperties.clickWithId(DateTimePage.getContinueBtn(),driver);
 
-
-
         //checkout Page
         SharedProperties.clickWithId(CheckoutPage.getCheckoutBtn(),driver);
 
 driver.quit();
 
-       /* driver.findElement(By.id("com.urbanclap.urbanclap:id/get_started_button")).clickWithId();
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/search")).clickWithId();
-        driver.findElement(By.id("cc")).sendKeys("Plumber");
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/imageView_subcategory")).clickWithId();
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/luminosity_action_button_text")).clickWithId();
-        driver.findElement(By.className("android.widget.RadioButton")).clickWithId();
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/layout_add_address_title")).clickWithId();
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/location_other")).sendKeys("332");
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/landmark")).sendKeys("abc");
-
-
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/button_saveNewAddress")).clickWithId();
-
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/backgroundDate")).clickWithId();
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/frag_schedular_time_slot_item_button")).clickWithId();
-
-
-        driver.findElement(By.id("com.urbanclap.urbanclap:id/next")).clickWithId();
-*/
 
     }
 }
