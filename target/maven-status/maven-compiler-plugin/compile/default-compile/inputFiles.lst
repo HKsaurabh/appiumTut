@@ -1,8 +1,11 @@
 /Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/ElementLocators/SelectDateTimePage/DateTimePage.java
+/Users/saurabh/IdeaProjects/appiumtut2/src/main/java/ReportExtent.java
+/Users/saurabh/IdeaProjects/appiumtut2/src/main/java/MainApp.java
 /Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/ElementLocators/Search/SearchPage.java
 /Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/ElementLocators/ServicePage/ServicePage.java
+/Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/ElementLocators/AddressPage/AddNewAddress.java
 /Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/ElementLocators/CheckoutPage/CheckoutPage.java
 /Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/ElementLocators/HomePage/HomePage.java
-/Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/ElementLocators/FirstPage/FirsPage.java
+/Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/ElementLocators/FirstPage/FirstPage.java
 /Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/SharedProperties/SharedProperties.java
 /Users/saurabh/IdeaProjects/appiumtut2/src/main/java/com/ElementLocators/RepairPage/RepairPage.java

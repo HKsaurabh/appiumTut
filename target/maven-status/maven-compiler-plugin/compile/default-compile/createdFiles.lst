@@ -1,8 +1,11 @@
-com/ElementLocators/FirstPage/FirsPage.class
 com/ElementLocators/HomePage/HomePage.class
 com/ElementLocators/SelectDateTimePage/DateTimePage.class
 com/ElementLocators/CheckoutPage/CheckoutPage.class
 com/ElementLocators/ServicePage/ServicePage.class
+ReportExtent.class
+com/ElementLocators/FirstPage/FirstPage.class
+MainApp.class
+com/ElementLocators/AddressPage/AddNewAddress.class
 com/ElementLocators/Search/SearchPage.class
 com/SharedProperties/SharedProperties.class
 com/ElementLocators/RepairPage/RepairPage.class
