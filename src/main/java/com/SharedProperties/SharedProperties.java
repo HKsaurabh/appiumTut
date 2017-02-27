@@ -1,26 +1,15 @@
 package com.SharedProperties;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import java.lang.*;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import org.openqa.selenium.remote.DesiredCapabilities;
+
 
 /**
  * Created by saurabh on 27/02/17.
  */
 public class SharedProperties {
 
-    public static void openBrowser(String AppURL, String BrowserName) {
 
-
-    }
 
     public static void sendKeys(String elementXpath, String value, AndroidDriver driver) {
         driver.findElement(By.id(elementXpath)).sendKeys(value);
