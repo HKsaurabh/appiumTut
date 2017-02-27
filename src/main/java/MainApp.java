@@ -9,6 +9,9 @@ import com.ElementLocators.RepairPage.RepairPage;
 import com.ElementLocators.SelectDateTimePage.DateTimePage;
 import com.ElementLocators.ServicePage.ServicePage;
 import com.SharedProperties.SharedProperties;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import io.appium.java_client.android.AndroidDriver;
 import java.io.File;
 import java.net.MalformedURLException;
@@ -19,11 +22,26 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class MainApp extends SharedProperties {
 
     private static AndroidDriver driver;
-    public static void main(String[] args) throws MalformedURLException, InterruptedException {
+    ExtentReports extent;
+    ExtentTest test;
+
+    @BeforeClass
+    public void M1(){
+        extent = ReportExtent.GetExtent();
+
+    }
+
+
+    @Test(enabled = true)
+    public void placeOrder() throws MalformedURLException, InterruptedException {
+    try{
 
         File appDir = new File( "/Users/saurabh/Downloads");
         File app = new File(appDir, "UrbanClap_Services_v3.5.0_apkpure.com.apk");
@@ -83,8 +101,15 @@ public class MainApp extends SharedProperties {
         //checkout Page
         SharedProperties.clickWithId(CheckoutPage.getCheckoutBtn(),driver);
 
-driver.quit();
+    }
+            catch(Exception e){
+                    test.log(Status.ERROR, e.getMessage());}
 
+    }
 
+    @AfterClass
+    public void tear() {
+        extent.flush();
+        driver.quit();
     }
 }
